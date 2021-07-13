@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Bootstrap starter</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <main>
+
+    <header class="py-3 mb-5 text-center">
+      <div class="container">
+        <h1 class="h3 mb-0">Movies catalog</h1>
+      </div>
+    </header>
+
+
+    <div class="container-xl">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="container">
+            <section class="mb-4">
+              <h2 class="sr-only">Movie search form</h2>
+
+              <form class="js-search-form" action="https://echo.htmlacademy.ru" method="GET" autocomplete="off">
+                <div class="form-group">
+                  <input class="form-control js-search-form__title-input" type="search" name="title" placeholder="Avengers"
+                    aria-label="Title">
+                </div>
+
+                <div class="form-group">
+                  <input class="form-control js-search-form__rating-input" type="number" step="any" name="min_rating"
+                    placeholder="7.5" value="5" aria-label="Minimum rating">
+                </div>
+
+                <div class="form-group">
+                  <select class="form-control js-search-form__genre-select" name="genre" aria-label="Genre">
+                    <option value="All" selected>All</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <select class="form-control js-search-form__sort-select" name="sort" aria-label="Sorting">
+                    <option value="rating_desc" selected>Rating (high to low)</option>
+                    <option value="rating_asc">Rating (low to high)</option>
+                    <option value="az">A-Z</option>
+                    <option value="za">Z-A</option>
+                    <option value="year_desc">Year (new to old)</option>
+                    <option value="year_asc">Year (old to new)</option>
+                  </select>
+                </div>
+
+         
+
+                <button class="btn btn-primary btn-block" type="submit">Search</button>
+              </form>
+            </section>
+
+            <section class="mb-4">
+              <h2>Bookmarked movies</h2>
+              <ul class="bookmarked-movies list-group">
+                <!-- <li class="bookmarked-movie list-group-item">
+                  <h3 class="bookmarked-movie__title h6">Binnima kino</h3>
+                  <button class="btn btn-sm btn-danger js-remove-bookmarked-movie-button">Remove</button>
+                </li> -->
+              </ul>
+            </section>
+          </div>
+        </div>
+
+
+        <section class="col-md-8">
+          <h2 class="h5">Search results</h2>
+          <div class="alert alert-info">Use the form on the left to search for a movie</div>
+
+          <ul class="search-results row list-unstyled">
+            <!-- <li class="search-results__item movie col-sm-6 mb-4">
+              <div class="card">
+                <img class="movie__poster card-img-top" src="https://picsum.photos/id/870/300" alt="" width="300" height="200">
+        
+                <div class="card-body">
+                  <h3 class="movie__title h5">Binnima kino</h3>
+                  <p class="card-text">
+                    <img src="img/calendar.svg" alt="Calendar" width="25" height="25">
+                    <span class="movie__year">2021</span>
+                  </p>
+        
+                  <p class="card-text">
+                    <img src="img/star.svg" alt="Star" width="25" height="25">
+                    <span class="movie__rating">5.3</span>
+                  </p>
+        
+                  <p class="card-text d-flex flex-column flex-md-row flex-wrap justify-content-around">
+                    <a class="movie__trailer-link m-1 m-xl-0 btn btn-outline-primary btn-sm" href="https://www.youtube.com/watch?v=IF_kl-KmFYo" target="_blank">Watch trailer</a>
+                    <button class="m-1 m-xl-0 btn btn-outline-info btn-sm js-movie-modal-opener" type="button" data-bs-toggle="modal" data-bs-target="#movie-info-modal">More info</button>
+                    <button class="m-1 m-xl-0 btn btn-outline-success btn-sm js-movie-bookmark" type="button">Bookmark</button>
+                  </p>
+                </div>
+              </div>
+            </li> -->
+          </ul>
+        </section>
+      </div><!-- row -->
+    </div><!-- container -->
+
+  </main>
+
+
+  <!-- MODAL -->
+
+  <section class="movie-info-modal modal fade" id="movie-info-modal" tabindex="-1" aria-labelledby="movie-info-title" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="movie-info-modal__title h4 modal-title" id="movie-info-title"></h2>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="./js/movies-new.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
